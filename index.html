@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <title>Web2_2</title>
 </head>
 <body>
@@ -14,8 +15,11 @@
                 <h1>Web 2_2</h1>
                 <img class="logo" src="img/logo.png" alt="polytech logo">
             </div>
+            <div id="hamburger" class="hamburger">
+                <i class="fas fa-hamburger"></i>
+            </div>
         </header>
-        <aside class="sidebar">
+        <aside id="sidebar" class="sidebar">
             <ul class="sidebar__menu">
                 <li class="sidebar__item">
                     <a class="sidebar__link" href="#container">Grid-контейнер, Grid-элементы</a>
@@ -44,65 +48,152 @@
                 </li>
             </ul>
         </aside>
-        <main id="container" class="main">
-            <section class="wrapper">
-                <h3>Grid-Inline 3 Контейнера (не переносятся)</h3>
-                <div class="container-inline">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+        <main class="main">
+            <section id="container" class="wrapper">
+                <h2>Grid-контейнер, Grid-элементы</h2>
+                
+                <div class="section__item">
+                    <h3>Grid-Inline 3 Контейнера (не переносятся)</h3>
+                    <div class="container-inline">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container-inline">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    <div class="container-inline">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
                 </div>
-                <div class="container-inline">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+        
+                
+                <div class="section__item">
+                    <h3>Grid Блоки 2 Контейнера (переносятся)</h3>
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                    ---------------
+                    <div class="container">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
                 </div>
-                <div class="container-inline">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
+        
+
+
+
+
+
+
+            </section>
+
+            <section id="lines">
+                <h2>Линии, трейки, ячейки, области</h2>
+                
+                <div class="section__item">
+
+                    <h3>Gap: 15px</h3>
+                    <div class="container g-t-b">
+                        <div class="box">(1 fr, 1fr)</div>
+                        <div class="box">(1 fr, 3 fr)</div>
+                        <div class="box">(1 fr, 5 fr)</div>
+                        <div class="box">(3 fr, 1 fr)</div>
+                        <div class="box">(3 fr, 3 fr)</div>
+                        <div class="box">(3 fr, 5 fr)</div>
+                        <div class="box">(5 fr, 1 fr)</div>
+                        <div class="box">(5 fr, 3 fr)</div>
+                        <div class="box">(5 fr, 5 fr)</div>
+                    </div>
+                </div>
+
+
+                <div class="section__item">
+                    <h3>Области</h3>
+                    <div class="container g-t-a">
+                        <div class="box box_header">HEADER</div>
+                        <div class="box box_side">SIDE</div>
+                        <div class="box box_main">MAIN</div>
+                        <div class="box box_footer">FOOTER</div>
+                    </div>
+                </div>
+
+                <div class="section__item">
+                    <h3>Галерея</h3>
+                    <div class="container gallery">
+
+                        <div class="gallery__item gallery__item_1">
+                            <img src="img/gallery/project-1.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_2">
+                            <img src="img/gallery/project-2.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_3">
+                            <img src="img/gallery/project-3.jpg" alt="">
+                        </div>
+
+                        <div class="gallery__item gallery__item_4">
+                            <img src="img/gallery/project-4.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_5">
+                            <img src="img/gallery/project-5.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_6">
+                            <img src="img/gallery/project-6.jpg" alt="">
+                        </div>
+
+
+                    </div>
                 </div>
             </section>
-        
-            <section>
-                <h3>Grid-template-columns</h3>
-                <div class="container g-t-c">
-                    <div class="box">1 fr</div>
-                    <div class="box">3 fr</div>
-                    <div class="box">5 fr</div>
+
+            <section id="order">
+                <h2>Порядок элементов</h2>
+
+                <div class="section__item">
+                    <h3>Дефолтный</h3>
+                    <div class="container con-ord">
+                        <div class="box">DOM1</div>
+                        <div class="box">DOM2</div>
+                        <div class="box">DOM3</div>
+                        <div class="box">DOM4</div>
+
+                    </div>
                 </div>
-            </section>
-        
-            <section>
-                <h3>Grid-template-rows</h3>
-                <div class="container g-t-r">
-                    <div class="box">1 fr</div>
-                    <div class="box">3 fr</div>
-                    <div class="box">5 fr</div>
+
+                <div class="section__item">
+                    <h3>Измененный</h3>
+                    <div class="container con-ord">
+                        <div class="box box-1">DOM1</div>
+                        <div class="box box-2">DOM2</div>
+                        <div class="box box-3">DOM3</div>
+                        <div class="box box-4">DOM4</div>
+
+                    </div>
                 </div>
-            </section>
-        
-            <section>
-                <h3>Both rows and columns</h3>
-                <div class="container g-t-b">
-                    <div class="box">(1 fr, 1fr)</div>
-                    <div class="box">(1 fr, 3 fr)</div>
-                    <div class="box">(1 fr, 5 fr)</div>
-                    <div class="box">(3 fr, 1 fr)</div>
-                    <div class="box">(3 fr, 3 fr)</div>
-                    <div class="box">(3 fr, 5 fr)</div>
-                    <div class="box">(5 fr, 1 fr)</div>
-                    <div class="box">(5 fr, 3 fr)</div>
-                    <div class="box">(5 fr, 5 fr)</div>
-                </div>
+
             </section>
         </main>
         <footer class="footer">
             <img class="logo" src="img/logo.png" alt="polytech-footer">
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
