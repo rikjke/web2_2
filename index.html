@@ -8,6 +8,101 @@
     <title>Web2_2</title>
 </head>
 <body>
-    
+    <div class="app">
+        <header class="header">
+            <div class="logo-wrapper">
+                <h1>Web 2_2</h1>
+                <img class="logo" src="img/logo.png" alt="polytech logo">
+            </div>
+        </header>
+        <aside class="sidebar">
+            <ul class="sidebar__menu">
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#container">Grid-контейнер, Grid-элементы</a>
+                </li>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#lines">Линии, треки, ячейки, области</a>
+                </li>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#structure">Формирование явной и неявной структуры grid</a>
+                </li>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#size">Управление размерами элементов</a>
+                </li>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#ram">Шаблон RAM</a>
+                </li>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#align">Выравнивание элементов</a>
+                </li>
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#order">Порядок элементов</a>
+                </li>
+
+                <li class="sidebar__item">
+                    <a class="sidebar__link" href="#grid">Различные способы расположения элементов в сетке</a>
+                </li>
+            </ul>
+        </aside>
+        <main id="container" class="main">
+            <section class="wrapper">
+                <h3>Grid-Inline 3 Контейнера (не переносятся)</h3>
+                <div class="container-inline">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="container-inline">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="container-inline">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </section>
+        
+            <section>
+                <h3>Grid-template-columns</h3>
+                <div class="container g-t-c">
+                    <div class="box">1 fr</div>
+                    <div class="box">3 fr</div>
+                    <div class="box">5 fr</div>
+                </div>
+            </section>
+        
+            <section>
+                <h3>Grid-template-rows</h3>
+                <div class="container g-t-r">
+                    <div class="box">1 fr</div>
+                    <div class="box">3 fr</div>
+                    <div class="box">5 fr</div>
+                </div>
+            </section>
+        
+            <section>
+                <h3>Both rows and columns</h3>
+                <div class="container g-t-b">
+                    <div class="box">(1 fr, 1fr)</div>
+                    <div class="box">(1 fr, 3 fr)</div>
+                    <div class="box">(1 fr, 5 fr)</div>
+                    <div class="box">(3 fr, 1 fr)</div>
+                    <div class="box">(3 fr, 3 fr)</div>
+                    <div class="box">(3 fr, 5 fr)</div>
+                    <div class="box">(5 fr, 1 fr)</div>
+                    <div class="box">(5 fr, 3 fr)</div>
+                    <div class="box">(5 fr, 5 fr)</div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <img class="logo" src="img/logo.png" alt="polytech-footer">
+        </footer>
+    </div>
 </body>
 </html>
