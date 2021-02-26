@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,29 +23,29 @@
         <aside id="sidebar" class="sidebar">
             <ul class="sidebar__menu">
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#container">Grid-контейнер, Grid-элементы</a>
+                    <a class="sidebar__link" href="#container"><i class="fas fa-play"></i>Grid-контейнер, Grid-элементы</a>
                 </li>
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#lines">Линии, треки, ячейки, области</a>
+                    <a class="sidebar__link" href="#lines"><i class="fas fa-play"></i>Линии, треки, ячейки, области</a>
                 </li>
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#structure">Формирование явной и неявной структуры grid</a>
+                    <a class="sidebar__link" href="#structure"><i class="fas fa-play"></i>Формирование явной и неявной структуры grid</a>
                 </li>
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#size">Управление размерами элементов</a>
+                    <a class="sidebar__link" href="#size"><i class="fas fa-play"></i>Управление размерами элементов</a>
                 </li>
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#ram">Шаблон RAM</a>
+                    <a class="sidebar__link" href="#ram"><i class="fas fa-play"></i>Шаблон RAM</a>
                 </li>
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#align">Выравнивание элементов</a>
+                    <a class="sidebar__link" href="#align"><i class="fas fa-play"></i>Выравнивание элементов</a>
                 </li>
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#order">Порядок элементов</a>
+                    <a class="sidebar__link" href="#order"><i class="fas fa-play"></i>Порядок элементов</a>
                 </li>
 
                 <li class="sidebar__item">
-                    <a class="sidebar__link" href="#grid">Различные способы расположения элементов в сетке</a>
+                    <a class="sidebar__link" href="#grid"><i class="fas fa-play"></i>Различные способы расположения элементов в сетке</a>
                 </li>
             </ul>
         </aside>
@@ -75,7 +76,7 @@
                 </div>
         
                 
-                <div class="section__item">
+                <div class="section__item grid-block">
                     <h3>Grid Блоки 2 Контейнера (переносятся)</h3>
                     <div class="container">
                         <div class="box"></div>
@@ -91,7 +92,8 @@
                         <div class="box"></div>
                     </div>
                 </div>
-        
+
+
 
 
 
@@ -130,37 +132,144 @@
                     </div>
                 </div>
 
+
+            </section>
+
+            <section id="structure" class="wrapper">
+                <h2>Формирование явной и неявной структуры grid</h2>
+
                 <div class="section__item">
-                    <h3>Галерея</h3>
-                    <div class="container gallery">
+                    <h3>Явная структура (задано явное количество колонок и рядов, очередь и размеры элементов)</h3>
+                    <div class="container g-t-a">
+                        <div class="box box_header">HEADER</div>
+                        <div class="box box_side">SIDE</div>
+                        <div class="box box_main">MAIN</div>
+                        <div class="box box_footer">FOOTER</div>
+                    </div>
+                </div>
+                
+                <div class="section__item">
+                    <h3>Неявная структура</h3>
+                    <p>Грид в случае необходимости может автоматически создавать колонки и ряды. Чтобы управлять их характеристиками, есть свойста <span class="colored">grid-auto-columns</span> и <span class="colored">grid-auto-rows</span></p>
+                    <h4>Columns и Rows не указаны</h4>
+                    <p>Грид создает одноколоночную сетку, высота ряда зависит от размера контента</p>
+                    <div class="container impl-1">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
 
-                        <div class="gallery__item gallery__item_1">
-                            <img src="img/gallery/project-1.jpg" alt="">
-                        </div>
-                        
-                        <div class="gallery__item gallery__item_2">
-                            <img src="img/gallery/project-2.jpg" alt="">
-                        </div>
-                        
-                        <div class="gallery__item gallery__item_3">
-                            <img src="img/gallery/project-3.jpg" alt="">
-                        </div>
+                    </div>            
 
-                        <div class="gallery__item gallery__item_4">
-                            <img src="img/gallery/project-4.jpg" alt="">
-                        </div>
-                        
-                        <div class="gallery__item gallery__item_5">
-                            <img src="img/gallery/project-5.jpg" alt="">
-                        </div>
-                        
-                        <div class="gallery__item gallery__item_6">
-                            <img src="img/gallery/project-6.jpg" alt="">
-                        </div>
+                    <h4>Columns и Rows не указаны</h4>
+                    <p>Здесь высота ряда задана через grid-auto-rows: 300px</p>
+                    <div class="container impl-3">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>            
 
+
+                    
+                    <h4>Columns и Rows не указаны, gria-auto-flow: column</h4>
+                    <p>Создается сетка в один ряд</p>
+                    <div class="container impl-2">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+
+                    </div>                    
+
+
+                    <h4>Grid-auto-flow: dense</h4>
+                    <div class="container implicit implicit-dense">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section id="size">
+                <h2>Управление размерами элементов</h2>
+
+                <div class="section__item">
+                    <h3>Auto-fill</h3>
+                    <div class="container auto-fill">
+                        <div class="box">minmax(200px, 1fr)</div>
+                        <div class="box">minmax(200px, 1fr)</div>
+                        <div class="box">minmax(200px, 1fr)</div>
 
                     </div>
                 </div>
+
+                <div class="section__item">
+                    <h3>Auto-fit</h3>
+                    <div class="container auto-fit">
+                        <div class="box">minmax(200px, 1fr)</div>
+                        <div class="box">minmax(200px, 1fr)</div>
+                        <div class="box">minmax(200px, 1fr)</div>
+
+                    </div>
+                </div>
+                
+                <div class="section__item">
+                    <h3>Явно заданные размеры</h3>
+                    <div class="container con-expl">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section id="ram">
+                <h2>Шаблон RAM (repeat, auto, minmax)</h2>
+                <div class="section__item">
+                    <h3></h3>
+                    <div class="container ram">
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                        <div class="box"></div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="align">
+                <h2>Выравнивание элементов</h2>
+                <div class="section__item">
+                    <h3>Justify Self </h3>
+                    <div class="container grid-items">
+                        <div class="box">default</div>
+                        <div class="box item-box-2">END</div>
+                        <div class="box item-box-3">STRETCH</div>
+                        <div class="box item-box-4">Center</div>
+                    </div>
+                </div>
+        
+                <div class="section__item">
+                    <h3>Align Self </h3>
+                    <div class="container align-items">
+                        <div class="box align-box-2">Stretch</div>
+                        <div class="box align-box-3">End</div>
+                        <div class="box align-box-4">Center</div>
+                    </div>
+                </div>
+        
             </section>
 
             <section id="order">
@@ -187,6 +296,54 @@
 
                     </div>
                 </div>
+
+            </section>
+
+            <section id="grid">
+                <h2>Различные способы расположения элементов в сетке</h2>
+
+                <div class="section__item">
+                    <h3>Галерея (свойста grid-column, grid-row)</h3>
+                    <div class="container gallery">
+                
+                        <div class="gallery__item gallery__item_1">
+                            <img src="img/gallery/project-1.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_2">
+                            <img src="img/gallery/project-2.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_3">
+                            <img src="img/gallery/project-3.jpg" alt="">
+                        </div>
+                
+                        <div class="gallery__item gallery__item_4">
+                            <img src="img/gallery/project-4.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_5">
+                            <img src="img/gallery/project-5.jpg" alt="">
+                        </div>
+                        
+                        <div class="gallery__item gallery__item_6">
+                            <img src="img/gallery/project-6.jpg" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="section__item">
+                    <h3>Свойство grid-template-areas у родителя и grid-area у дочерних айтемов</h3>
+                    <div class="container g-t-a">
+                        <div class="box box_header">HEADER</div>
+                        <div class="box box_side">SIDE</div>
+                        <div class="box box_main">MAIN</div>
+                        <div class="box box_footer">FOOTER</div>
+                    </div>
+                </div>
+
+
 
             </section>
         </main>
